@@ -70,10 +70,11 @@ chrome_options.add_argument("--use-fake-device-for-media-stream")
 service = Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service, options=chrome_options)
 
-TempDirPath = rf"{current_dir}/Frontend/Files"
+TempDirPath = rf"C:\Users\User\Desktop\Jarvis\Frontend\Files"
 
 def SetAssistantStatus(Status):
     with open(rf"{TempDirPath}/Status.data" , "w",encoding="utf-8") as f:
+        print("im storing .....")
         f.write(Status)
 
 def QueryModifier(Query):
